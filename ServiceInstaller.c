@@ -43,6 +43,14 @@ int main(int argc, char** argv)
 		return ERROR_NODRVFILE;
 	}
 
+	//check for relative path
+	if ( strchr(argv[1], ":") != NULL ) 
+	{
+		printf("relative paths notsupported, absolute path required\n");
+
+		return ERROR_ARGS;
+	}
+
 	Install(argv[1], argv[2]);
 
 	return ERROR_SUCCESS;
