@@ -44,7 +44,7 @@ int main(int argc, char** argv)
 	}
 
 	//check for relative path
-	if ( strchr(argv[1], ":") != NULL ) 
+	if ( strchr(argv[1], ':') != NULL ) 
 	{
 		printf("relative paths notsupported, absolute path required\n");
 
